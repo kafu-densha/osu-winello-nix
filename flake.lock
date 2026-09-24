@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1790218706,
+        "narHash": "sha256-6e4Na3z008XpdVyOXgfasXIn1aN+z8AXFG+jXdQSyuI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c508844df6c28fa6dabc1b6af70f3ccbd65c5201",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "osu-winello": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790036911,
+        "narHash": "sha256-4i9bN3SFNGz0+rW6/JU3epxZpoLsB2cNi7M+Uy/lYD4=",
+        "owner": "NelloKudo",
+        "repo": "osu-winello",
+        "rev": "2914ed7687e99d43dde7821c3fd04f3723725723",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NelloKudo",
+        "repo": "osu-winello",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "osu-winello": "osu-winello"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
