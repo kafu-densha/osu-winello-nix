@@ -16,22 +16,23 @@
       osu-winello,
     }:
     let
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "x86_64-linux"
-      ];
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      packages = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        {
-          osu = pkgs.callPackage ./osu.nix {
-            inherit osu-winello;
-          };
-          default = self.packages.${system}.osu;
-        }
-      );
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          git
+          wget
+          zenity
+          xdg-desktop-portal
+          unzip
+          steam-run
+        ];
+
+        shellHook = ''
+          steam-run ${osu-winello}/osu-winello.sh
+        '';
+      };
     };
 }
