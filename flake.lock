@@ -16,7 +16,7 @@
         "type": "github"
       }
     },
-    "osu-winello": {
+    "osu-winello-source": {
       "flake": false,
       "locked": {
         "lastModified": 1790036911,
@@ -35,7 +35,7 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "osu-winello": "osu-winello"
+        "osu-winello-source": "osu-winello-source"
       }
     }
   },
