@@ -32,6 +32,7 @@
 
         shellHook = ''
           steam-run ${osu-winello}/osu-winello.sh
+	  steam-run osu-wine
         '';
       };
     };
